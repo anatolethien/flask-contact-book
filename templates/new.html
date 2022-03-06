@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/new" method="POST">
+	<label for="first_name">First name</label>
+	<input type="text" name="first_name" autocomplete="off">
+	<label for="last_name">Last name</label>
+	<input type="text" name="last_name" autocomplete="off">
+	<label for="email">Email address</label>
+	<input type="text" name="email" autocomplete="off">
+	<label for="phone">Phone number</label>
+	<input type="text" name="phone" autocomplete="off">
+	<div class="action">
+		<button class="hero" type="submit">Add contact</button>
+	</div>
+</form>
+
+{% endblock %}

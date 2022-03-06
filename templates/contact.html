@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="action">
+	<a href="/contact/{{ contact.id }}/edit">
+		<button class="hero" type="button">Edit contact</button>
+	</a>
+	<a href="/contact/{{ contact.id }}/delete">
+		<button class="hero" type="button">Delete contact</button>
+	</a>
+</div>
+<div class="data">
+	<dl class="contact">
+		<dt>First name</dt>
+		<dd>{{ contact.first_name }}</dd>
+		<dt>Last name</dt>
+		<dd>{{ contact.last_name }}</dd>
+		<dt>Email address</dt>
+		<dd>{{ contact.email }}</dd>
+		<dt>Phone number</dt>
+		<dd>{{ contact.phone }}</dd>
+	</dl>
+</div>
+{% endblock %}

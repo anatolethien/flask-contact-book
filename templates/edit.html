@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/contact/{{ contact.id }}/edit" method="POST">
+	<label for="first_name">First name</label>
+	<input type="text" name="first_name" autocomplete="off" value="{{ contact.first_name }}">
+	<label for="last_name">Last name</label>
+	<input type="text" name="last_name" autocomplete="off" value="{{ contact.last_name }}">
+	<label for="email">Email address</label>
+	<input type="text" name="email" autocomplete="off" value="{{ contact.email }}">
+	<label for="phone">Phone number</label>
+	<input type="text" name="phone" autocomplete="off" value="{{ contact.phone }}">
+	<div class="action">
+		<button class="hero" type="submit">Edit contact</button>
+	</div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,195 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-family: sans-serif;
+	font-size: 2.5vh;
+	--red: #FC4F4F;
+	--green: #6ECB63;
+	--blue: #0F52BA;
+	--primary: var(--green);
+	--secondary: #FFFFFF;
+}
+
+/* base.html */
+
+body {
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 15rem;
+	padding-right: 15rem;
+}
+
+@media only screen and (max-device-width: 550px) {
+	.container {
+		padding-left: .5rem;
+		padding-right: .5rem;
+	}
+}
+
+header.container {
+	margin-bottom: 2.5rem;
+}
+
+main.container {
+	flex-flow: column nowrap;
+}
+
+footer.container {
+	margin-top: 2.5rem;
+}
+
+.hero {
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
+.logo {
+	height: 5rem;
+}
+
+hgroup {
+	text-align: right;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+/* index.html */
+
+button {
+	font-size: 1rem;
+	font-weight: bold;
+	background-color: var(--primary);
+	color: var(--secondary);
+	border: none;
+	cursor: pointer;
+	padding: .5rem;
+}
+
+ul.list {
+	width: 100%;
+}
+
+ul.list li {
+	background-color: var(--primary);
+	color: var(--secondary);
+	display: flex;
+	flex-flow: row wrap;
+	padding: .5rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: var(--primary);
+}
+
+a.contrast {
+	color: var(--secondary);
+}
+
+footer nav {
+	display: flex;
+	flex-flow: column nowrap;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+/* contact.html */
+
+ul.contact {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+ul.contact li {
+	display: flex;
+	flex-flow: column nowrap;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+ul.contact li small {
+	color: var(--primary);
+	margin-bottom: .5rem;
+}
+
+/* new.html */
+
+form {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+}
+
+form label {
+	color: var(--primary)
+}
+
+form input {
+	font-size: 1rem;
+	margin-bottom: .1rem;
+}
+
+form input[type=text] {
+	border: solid var(--primary);
+	padding: .25rem;
+	outline: none;
+	margin-bottom: 1rem;
+}
+
+form button[type=submit] {
+	margin-top: 2rem;
+}
+
+/* error.html */
+
+div.error {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	color: var(--primary);
+	width: 100%;
+}
+
+div.error span.code {
+	font-size: 10rem;
+	font-weight: bolder;
+}
+
+div.error span.text {
+	text-align: center;
+	font-size: 5rem;
+	font-weight: bolder;
+}
+
+/* delete.html */
+
+.success {
+	background-color: var(--green);
+}
+
+.warning {
+	background-color: var(--red);
+}

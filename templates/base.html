@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Contacts</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css')}}">
+	</head>
+	<body>
+		<header class="container hero">
+			<a href="/"><img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo" class="logo"></a>
+			<hgroup>
+				<h1>Databook</h1>
+				<h2>Manage your contacts</h2>
+			</hgroup>
+		</header>
+		<main class="container">
+			{% block content %}
+			{% endblock %}
+		</main>
+		<footer class="container hero">
+			<div>
+				<strong>Built by anatolethien with ❤️</strong>
+				Powered by Python, Flask and SQLite3
+			</div>
+			<nav>
+				<a href="https://anatolethien.eu"><small>Author</small></a>
+				<a href="https://github.com/anatolethien"><small>Repository</small></a>
+			</nav>
+		</footer>
+	</body>
+</html>
