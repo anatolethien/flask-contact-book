@@ -1,10 +1,11 @@
+import os
 import sqlite3
 import re
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
 db = SQLAlchemy(app)
 
 class Contact(db.Model):
@@ -82,4 +83,6 @@ def not_found(error):
 	return render_template('error.html', code='500', text='Internal Server Error')
 
 if __name__ == '__main__':
+	with app.app_context():
+		db.create_all()
 	app.run(debug=True, host='0.0.0.0')
