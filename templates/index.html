@@ -2,14 +2,14 @@
 {% block content %}
 <div class="action">
 	<a href="{{ url_for('new') }}">
-		<button class="hero" type="button">Add contact</button>
+		<button type="button">Add contact</button>
 	</a>
 </div>
-<div class="data">
-	<ul class="list">
+<div>
+	<ul>
 		{% for contact in contact_list %}
 		<li>
-			<a href="{{ url_for('contact', id=contact.id) }}" class="contrast">{{ contact.first_name }} {{ contact.last_name }}</a>
+			<a href="{{ url_for('contact', id=contact.id) }}">{{ contact.first_name }} {{ contact.last_name }}</a>
 		</li>
 		{% endfor %}
 	</ul>
